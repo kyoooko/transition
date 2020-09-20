@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello,vue.js</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- 今回はv-on:clickに直接JS式各パターン。trueとfalse変わる（showに!showが代入される） -->
+    <button v-on:click="show=!show">Change</button>
+    <transition>
+      <p v-show="show">Hello Transition</p>
+    </transition>
+
+    
+  
+
+
+    <hr>
+    <!-- デバック用 -->
+    <pre>{{$data}}</pre>
+  </div>
+  <!-- ①vie.jsのCDNを先に読み込む。URLは公式ページから -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <!-- ②<script>下記のようにJSを別ファイルにしない場合はここにJSを書く</script> -->
+  <script src="js/main.js"></script>
+</body>
+</html>
